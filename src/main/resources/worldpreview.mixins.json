@@ -26,6 +26,9 @@
     "client.KeyboardMixin",
     "client.GameOptionsMixin",
     "client.ClientWorldMixin",
+    "client.VideoOptionsScreenMixin",
+
+    "other.WorldGenerationProgressLoggerMixin",
 
     "server.MinecraftServerMixin",
     "server.ServerChunkManagerMixin",

@@ -30,6 +30,9 @@ There are 5 ways the player can interact with the preview:
 - Cycle Chunk Map, default button "h" (English keyboard): Cycle through the 4 positions of the chunk map
 - Freeze Preview, default button "j" (English keyboard): Freezes the preview (helps with CPU performance)
 
+**Autofreeze Option**
+In the Video Settings of Minecraft there is another option called "Freeze Preview at". This will automatically freeze the preview once the world generation reaches the set percentage. If you select 0%, the preview will not render at all and if you select 100% it won't automatically freeze.
+
 ## For Macro Makers
 The mod prints 3 different log lines:
 - "Starting preview at (x, y, z)" at the start of the preview (Reset buttons unlocked)

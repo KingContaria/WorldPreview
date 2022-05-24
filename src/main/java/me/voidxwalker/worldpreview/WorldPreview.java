@@ -2,6 +2,7 @@ package me.voidxwalker.worldpreview;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.options.DoubleOption;
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.WorldRenderer;
@@ -33,6 +34,11 @@ public class WorldPreview  implements ClientModInitializer {
    public static KeyBinding resetKey;
    public static KeyBinding freezeKey;
    public static KeyBinding cycleChunkMapKey;
+   public static double autoFreezeAt = 100;
+   public static DoubleOption autoFreezeAtOption = new DoubleOption("Freeze Preview at",0.0,100.0, 1.0F, (gameOptions) -> WorldPreview.autoFreezeAt, (gameOptions, double_) -> WorldPreview.autoFreezeAt = double_, (gameOptions, doubleOption) -> {
+      double d = doubleOption.get(gameOptions);
+      return doubleOption.getDisplayPrefix().append(new TranslatableText("%s%%", (int)d));
+   });
    public static int chunkMapPos;
    public static boolean freezePreview;
    public static final Object lock= new Object();
